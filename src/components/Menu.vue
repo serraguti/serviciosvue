@@ -13,6 +13,10 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
+          <router-link to="/ejemploservicios" 
+          class="nav-link">Ejemplo Servicios</router-link>
+        </li>        
+        <li class="nav-item">
           <router-link to="/coches" class="nav-link">Coches</router-link>
         </li>
         <li class="nav-item">
