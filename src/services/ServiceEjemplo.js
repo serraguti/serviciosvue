@@ -21,18 +21,18 @@ export default class ServiceEjemplo {
         resolve();
     });
 
-    getEmpleado(){
-        var request = "/api/empleados/7839";
-        var url = Global.urlapiempleados + request;
-        var empleado = {
-            apellido: "No soy nadie..."
-        };
-        axios.get(url).then(res => {
-            empleado = res.data;
-            console.log(empleado);
-            return empleado;
+    getEmpleado (idempleado) {
+        return new Promise(function(resolve){
+            var request = "/api/empleados/" + idempleado;
+            var url = Global.urlapiempleados + request;
+            var empleado = {
+                apellido: "No soy nadie..."
+            };
+            axios.get(url).then(res => {
+                empleado = res.data;
+                resolve(empleado);
+            });
         });
-        return empleado;
     }
 }
 
