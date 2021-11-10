@@ -13,6 +13,14 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
+          <router-link to="/departamentos" 
+          class="nav-link">Departamentos</router-link>
+        </li>           
+        <li class="nav-item">
+          <router-link to="/empleadosoficios" 
+          class="nav-link">Empleados Oficios</router-link>
+        </li>          
+        <li class="nav-item">
           <router-link to="/ejemploservicios" 
           class="nav-link">Ejemplo Servicios</router-link>
         </li>        
