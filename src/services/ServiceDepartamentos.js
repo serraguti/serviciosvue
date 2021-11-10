@@ -12,4 +12,14 @@ export default class ServiceDepartamentos{
             });
         });
     }
+
+    insertarDepartamento(departamento){
+        return new Promise(function(resolve){
+            var request = "/api/departamentos";
+            var url = Global.urldepartamentoscrud + request;
+            axios.post(url, departamento).then(res => {
+                resolve(res);
+            });
+        });
+    }
 }

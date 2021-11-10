@@ -1,6 +1,10 @@
 <template>
     <div>
         <h1>Departamentos</h1>
+        <router-link class="btn btn-info" to="/insertardepartamento">
+            Nuevo Departamento
+        </router-link>
+        <hr/>
         <table class="table table-danger"
         v-if="departamentos.length > 0">
             <thead>
@@ -8,6 +12,7 @@
                     <th>Número</th>
                     <th>Nombre</th>
                     <th>Localidad</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -16,6 +21,12 @@
                     <td>{{dept.numero}}</td>
                     <td>{{dept.nombre}}</td>
                     <td>{{dept.localidad}}</td>
+                    <td>
+                        <router-link class="btn btn-outline-dark"
+:to="'/detallesdepartamento/' + dept.numero + '/' + dept.nombre + '/' + dept.localidad">
+                            Detalles
+                        </router-link>
+                    </td>
                 </tr>
             </tbody>
         </table>
