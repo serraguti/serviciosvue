@@ -8,6 +8,8 @@ import EmpleadosServiciosOficios from './components/EmpleadosServiciosOficios.vu
 import DepartamentosIndex from './components/departamentos/DepartamentosIndex.vue';
 import InsertarDepartamento from './components/departamentos/InsertarDepartamento.vue';
 import DetallesDepartamento from './components/departamentos/DetallesDepartamento.vue';
+import ModificarDepartamento from './components/departamentos/ModificarDepartamento.vue';
+import EliminarDepartamento from './components/departamentos/EliminarDepartamento.vue';
 
 Vue.config.productionTip = false
 
@@ -18,6 +20,8 @@ const routes = [
   {path: "/insertardepartamento", component: InsertarDepartamento},
   {path: "/detallesdepartamento/:iddepartamento/:nombre/:localidad"
   , component: DetallesDepartamento},
+  {path: "/modificardepartamento/:iddepartamento", component: ModificarDepartamento},
+  {path: "/eliminardepartamento/:iddepartamento", component: EliminarDepartamento},
   {path: "/coches", component: Coches},
   {path: "/empleadosoficios", component: EmpleadosServiciosOficios},
   {path: "/ejemploservicios", component: EjemploServicios},

@@ -26,6 +26,14 @@
 :to="'/detallesdepartamento/' + dept.numero + '/' + dept.nombre + '/' + dept.localidad">
                             Detalles
                         </router-link>
+                        <router-link class="btn btn-info"
+                        :to="'/modificardepartamento/' + dept.numero">
+                            Editar
+                        </router-link>
+                        <router-link class="btn btn-danger"
+                        :to="'/eliminardepartamento/' + dept.numero">
+                            Eliminar
+                        </router-link>
                     </td>
                 </tr>
             </tbody>
